@@ -13,9 +13,10 @@
     <meta property="og:title" content="TJV General Hardware — Building Materials & Construction Supplies" />
     <meta property="og:description" content="Quality building materials and tools for contractors and homeowners across Wakiso and beyond." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/tjv-logo.webp" />
+    <meta property="og:image" content="/public/tjv-logo-new.png" />
     <title>TJV General Hardware | Quality Building Materials & Tools</title>
     <link rel="canonical" href="https://tjvhardware.ug" />
+    <link rel="icon" type="image/png" href="/public/tjv-logo-new.png" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://www.google.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,8 +26,8 @@
     <script defer>
       (function () {
         var candidates = [
-          { w: 640, u: "assets/tjv-products-640.webp" },
-          { w: 1080, u: "assets/tjv-products-1080.webp" }
+          { w: 640, u: "/tjv-products-640.webp" },
+          { w: 1080, u: "/tjv-products-1080.webp" }
         ];
         var isMobile = window.matchMedia("(max-width: 640px)").matches;
         var cssWidth = isMobile ? window.innerWidth : window.innerWidth * 0.48;
@@ -45,6 +46,23 @@
       })();
     </script>
     <link rel="stylesheet" href="styles.css" media="screen" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "TJV General Hardware",
+      "image": "https://tjvhardware.ug/public/tjv-logo-new.png",
+      "description": "Quality construction materials supplier in Wakiso, Uganda",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Wakiso",
+        "addressRegion": "Mango Shade",
+        "addressCountry": "UG"
+      },
+      "telephone": "+256790445392",
+      "url": "https://tjvhardware.ug"
+    }
+    </script>
   </head>
   <body>
     <!-- Top Bar with Contact -->
@@ -59,62 +77,51 @@
     <!-- Header with Logo and Navigation -->
     <header>
       <a class="logo" href="#home" aria-label="TJV General Hardware home">
-        <picture>
-          <source type="image/webp" srcset="assets/tjv-logo.webp" />
-          <img src="assets/tjv-logo.jpg" width="320" height="320" alt="TJV General Hardware logo" decoding="async" fetchpriority="high" />
-        </picture>
+        <img src="public/tjv-logo-new.png" width="116" height="72" alt="TJV General Hardware logo" decoding="async" fetchpriority="high" />
       </a>
       <nav id="menu">
         <a href="#home">Home</a>
         <a href="#products">Products</a>
         <a href="#why-tjv">Why TJV</a>
         <a href="#contact">Contact</a>
+        <a class="call-link nav-call" href="tel:+256790445392">Call Us</a>
       </nav>
       <div class="header-actions">
-        <a class="call-link" href="tel:+256790445392">Call us</a>
         <button type="button" class="menu-toggle" aria-controls="menu" aria-expanded="false">Menu</button>
       </div>
     </header>
 
+    <!-- Map Strip — immediately below nav -->
+    <div class="map-strip">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7476506844697!2d32.47429379999999!3d0.4024089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177daf6fe95fffa7%3A0x94a23c7f0a86243!2sTJV%20General%20Hardware%20Wakiso%2C%20Uganda!5e0!3m2!1sen!2s!4v1693477850000"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="TJV General Hardware location"></iframe>
+      <!-- Gradient: map fades into the hero copy below -->
+      <div class="map-strip-fade"></div>
+    </div>
+
     <main id="home">
-      <!-- Hero Section -->
+      <!-- Hero Section — copy floats over the bottom of the map strip -->
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">Your Building Partner in Wakiso and Beyond</p>
-          <h1>Build strong.<br /><span>Build right.</span></h1>
+          <h1>Build strong.<br /><span>Build right<span class="secret-trigger" onclick="toggleAdminAccess()" title="Admin access">.</span></span></h1>
           <p>From the first foundation to the final finish, TJV General Hardware offers dependable materials for every stage of your construction project. Quality you can build on.</p>
           <div class="hero-actions">
             <a class="button primary" href="#products">Explore our products <b>→</b></a>
             <a class="button outline" href="https://wa.me/256702147189">Chat on WhatsApp <b>↗</b></a>
           </div>
         </div>
-        <div class="hero-image">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="assets/tjv-products-640.webp 640w, assets/tjv-products-1080.webp 1080w"
-              sizes="(max-width: 640px) 100vw, 48vw"
-            />
-            <img
-              src="assets/tjv-products-1080.jpg"
-              srcset="assets/tjv-products-640.jpg 640w, assets/tjv-products-1080.jpg 1080w"
-              sizes="(max-width: 640px) 100vw, 48vw"
-              width="1080"
-              height="798"
-              alt="TJV General Hardware products including cement, tiles, wire, PVC pipes and roofing sheets"
-              fetchpriority="high"
-              decoding="async"
-            />
-          </picture>
-          <div class="image-stamp"><strong>TJV</strong><span>GENERAL<br />HARDWARE</span></div>
-        </div>
       </section>
 
       <!-- Quick Info Section -->
       <section class="quick-info">
-        <div><span>01</span><p><strong>Quality Materials</strong><br />For every construction need</p></div>
-        <div><span>02</span><p><strong>Trusted Brands</strong><br />Products built to last</p></div>
-        <div><span>03</span><p><strong>Expert Advice</strong><br />Professional guidance you can rely on</p></div>
+        <ul>
+          <li><span>01</span><p><strong>Quality Materials</strong><br />For every construction need</p></li>
+          <li><span>02</span><p><strong>Trusted Brands</strong><br />Products built to last</p></li>
+          <li><span>03</span><p><strong>Expert Advice</strong><br />Professional guidance you can rely on</p></li>
+        </ul>
         <a href="#contact" class="cta-link">Visit our store <b>→</b></a>
       </section>
 
@@ -125,9 +132,36 @@
           <h2>Complete Hardware Solutions</h2>
           <p>Whether you're a contractor, builder, or homeowner, we stock everything you need for residential and commercial construction projects.</p>
         </div>
-        <div class="product-poster">
-          <img src="assets/TJV General Hardware.gif" alt="TJV General Hardware products showcase" decoding="async" loading="lazy" width="100%" height="auto" />
+        
+        <!-- Products Display with Slideshow and In-Stock Items -->
+        <div class="products-display">
+          <!-- Slideshow Side -->
+          <div class="slideshow-container">
+            <div class="slideshow-frame">
+              <img id="catalogue-slideshow" src="images/1.jpg" alt="TJV Hardware catalogue page 1 of 9" decoding="async" />
+            </div>
+            <div class="slideshow-nav">
+              <button class="slide-btn prev-btn" aria-label="Previous slide">←</button>
+              <span class="slide-counter"><span id="current-slide">1</span>/<span id="total-slides">9</span></span>
+              <button class="slide-btn next-btn" aria-label="Next slide">→</button>
+            </div>
+          </div>
+
+          <!-- In-Stock Items Side -->
+          <div class="instock-container">
+            <div class="instock-header">
+              <h3>In-Stock Items</h3>
+              <a href="admin.html" class="admin-link hidden" id="admin-toggle" title="Admin panel">Admin</a>
+            </div>
+            <div id="instock-items" class="instock-grid">
+              <!-- Products loaded here by JavaScript -->
+            </div>
+            <div id="no-items-message" class="no-items">
+              <p>No items in stock. Check back soon!</p>
+            </div>
+          </div>
         </div>
+
         <div class="product-cards">
           <article>
             <span>01</span>
@@ -151,7 +185,7 @@
       <section class="visit" id="why-tjv">
         <div class="visit-panel">
           <p class="eyebrow">Why Choose TJV</p>
-          <h2>Trusted by Builders Across the Region</h2>
+          <h2>Trusted by Builders Around Wakiso and Beyond</h2>
           <p>With years of experience serving the construction community, TJV General Hardware is known for reliable products, competitive pricing, and expert customer service. We're committed to helping your projects succeed.</p>
           <div class="features">
             <div class="feature">
@@ -168,26 +202,20 @@
             </div>
           </div>
         </div>
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7476506844697!2d32.47429379999999!3d0.4024089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177daf6fe95fffa7%3A0x94a23c7f0a86243!2sTJV%20General%20Hardware%20Wakiso%2C%20Uganda!5e0!3m2!1sen!2s!4v1693477850000" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
       </section>
     </main>
 
     <!-- Footer with Contact Information -->
     <footer id="contact">
       <div class="footer-main">
-        <picture>
-          <source type="image/webp" srcset="assets/tjv-logo.webp" />
-          <img
-            src="assets/tjv-logo.jpg"
-            width="320"
-            height="320"
-            alt="TJV General Hardware"
-            loading="lazy"
-            decoding="async"
-          />
-        </picture>
+        <img
+          src="public/tjv-logo-new.png"
+          width="135"
+          height="105"
+          alt="TJV General Hardware logo"
+          loading="lazy"
+          decoding="async"
+        />
         <div>
           <p class="eyebrow">📍 Location</p>
           <h3>Wakiso<br />Mango Shade</h3>
@@ -196,7 +224,7 @@
           <p class="eyebrow">📞 Contact Us</p>
           <a href="tel:+256790445392">+256 790 445392</a>
           <a href="https://wa.me/256702147189">+256 702 147189</a>
-          <p style="margin-top: 12px; font-size: 12px;">Available Mon-Sat 8am-6pm<br />Sunday 9am-4pm</p>
+          <p style="margin-top: 12px; font-size: 14px; color: #f0f0f0; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">Available Mon-Sat 8am-6pm<br />Sunday 9am-4pm</p>
         </div>
         <a class="button yellow" href="https://wa.me/256702147189">Get in touch <b>→</b></a>
       </div>
@@ -208,11 +236,9 @@
 
     <!-- Audio Jingle -->
     <audio id="jingle" preload="auto" hidden>
-      <source src="assets/tvj-hardware-jingle.mpeg" type="audio/mpeg" />
+      <source src="/tvj-hardware-jingle.mpeg" type="audio/mpeg" />
     </audio>
 
     <script defer src="script.js"></script>
   </body>
-</html>ript src="script.js"></script>
-  </body>
-</html>
+</html>>
