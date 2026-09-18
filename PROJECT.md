@@ -9,23 +9,19 @@ Static website for TJV General Hardware, a construction materials supplier in Wa
 ## 📁 Clean Project Structure
 
 ```
-c:\Hardware\2\
 ├── index.html                  (Main website)
-├── styles.css                  (Styling - minified)
-├── script.js                   (Interactivity & jingle player)
+├── admin.html                  (Admin panel - password protected)
+├── styles.css                  (Styling)
+├── script.js                   (Interactivity, slideshow & audio)
+├── admin.js                    (Admin inventory management)
 │
-├── public/                     (Static assets - served by Vercel)
-│   ├── tjv-logo.webp          (Logo - modern format)
-│   ├── tjv-logo.jpg           (Logo - fallback)
-│   ├── tjv-logo-visit.webp
-│   ├── tjv-logo-visit.jpg
-│   ├── tjv-products-640.webp  (Hero - mobile)
-│   ├── tjv-products-640.jpg   (Hero - mobile fallback)
-│   ├── tjv-products-1080.webp (Hero - desktop)
-│   ├── tjv-products-1080.jpg  (Hero - desktop fallback)
-│   ├── TJV General Hardware.gif (Product showcase)
-│   ├── tjv-products-slideshow.mp4 (Product video)
-│   └── tvj-hardware-jingle.mpeg   (Audio jingle)
+├── images/                     (Catalogue slideshow & backdrop)
+│   ├── 1.jpg ... 9.jpg        (Canonical catalogue images)
+│   └── bg-luxury.jpg          (Luxury backdrop image)
+│
+├── public/                     (Static assets served by Vercel)
+│   ├── tjv-logo-new.png       (Brand logo)
+│   └── tvj-hardware-jingle.mpeg (Audio jingle)
 │
 ├── .github/
 │   └── workflows/
@@ -35,42 +31,39 @@ c:\Hardware\2\
 ├── .gitignore                  (Git ignore rules)
 ├── README.md                   (Quick start guide)
 ├── DEPLOY.md                   (Complete deployment guide)
-│
-└── .git/                       (Local Git repository)
-    ├── 4 commits
-    └── Ready to push to GitHub
+├── ADMIN_GUIDE.md              (Admin user guide)
+├── QUICK_START.md              (Quick start steps)
+└── SECRET_ACCESS.md            (Secret admin access guide)
 ```
 
 ## 🎯 What Was Optimized
 
-### Removed (4.95 MB Savings)
-- ❌ `/assets` folder (duplicated by `/public`)
-- ❌ `analyze.py`, `analyze2.py`, `analyze3.py`, `analyze4.py` (Python scripts)
-- ❌ `frame_sample.png` (unused sample)
-- ❌ `SETUP_COMPLETE.md` (temporary guide)
-- ❌ `QUICK_REFERENCE.txt` (consolidated)
-- ❌ `DEPLOYMENT.md` (consolidated into DEPLOY.md)
-- ❌ `GITHUB_SETUP.md` (consolidated into DEPLOY.md)
-- ❌ `.cursor/` folder (IDE-specific)
+### Removed (~10.1 MB Savings)
+- ❌ `TJV General Hardware catalogue/` folder (2.83 MB duplicate of `images/`)
+- ❌ `public/1.jpg` ... `9.jpg` (2.83 MB duplicate of `images/`)
+- ❌ `public/TJV General Hardware.gif` (1.87 MB unreferenced)
+- ❌ `public/tjv-products-slideshow.mp4` (1.83 MB unreferenced)
+- ❌ Deprecated logos: `tjv-logo-3d.jpg`, `tjv-logo.jpg`, `tjv-logo.webp`, `tjv-logo-visit.*`
+- ❌ Deprecated hero images: `tjv-products-640.*`, `tjv-products-1080.*`
+- ❌ `Downloads - Shortcut.lnk` and empty `.cursor/`
+- ❌ Dead inline preloading script and duplicate click handler in `index.html`
+- ❌ Obsolete CSS rules (`.hero-map`, `.admin-link`)
+- ❌ Obsolete task changelog markdown files
 
 ### Kept & Optimized
-- ✅ `README.md` - Streamlined to essentials
-- ✅ `DEPLOY.md` - All deployment info in one file
-- ✅ `public/` - All assets for Vercel
-- ✅ Configuration files - `vercel.json`, `.gitignore`
-- ✅ GitHub Actions - CI/CD workflow
+- ✅ `images/` - Canonical source for catalogue & background
+- ✅ `public/` - Lean active assets (`tjv-logo-new.png`, `tvj-hardware-jingle.mpeg`)
+- ✅ Production HTML, CSS, JS with zero dead code or double-event bindings
+- ✅ Core documentation & deployment workflow
 
 ## 📊 Project Statistics
 
 | Metric | Value |
 |--------|-------|
-| **Total Files** | 16 |
-| **Source Code** | 3 files |
-| **Documentation** | 2 files |
-| **Configuration** | 3 files |
-| **Static Assets** | 11 files |
-| **Project Size** | ~2 MB |
-| **Redundant Removed** | 4.95 MB |
+| **Total Media Size** | ~3.1 MB (down from ~13.5 MB) |
+| **Space Saved** | ~10.1 MB (~75% reduction) |
+| **Catalogue Image Copies** | 1 canonical copy (down from 3) |
+| **Dead Code / Scripts** | 0 |
 
 ## 🚀 Ready to Deploy
 

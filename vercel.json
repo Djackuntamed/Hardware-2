@@ -1,6 +1,19 @@
 {
   "outputDirectory": ".",
+  "cleanUrls": true,
   "rewrites": [
+    {
+      "source": "/favicon.ico",
+      "destination": "/public/tjv-logo-new.png"
+    },
+    {
+      "source": "/tjv-logo-new.png",
+      "destination": "/public/tjv-logo-new.png"
+    },
+    {
+      "source": "/tvj-hardware-jingle.mpeg",
+      "destination": "/public/tvj-hardware-jingle.mpeg"
+    },
     {
       "source": "/((?!admin\\.html|public/|images/|styles\\.css|script\\.js|admin\\.js).*)",
       "destination": "/index.html"
