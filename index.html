@@ -23,28 +23,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;700&display=swap" /></noscript>
-    <script defer>
-      (function () {
-        var candidates = [
-          { w: 640, u: "/tjv-products-640.webp" },
-          { w: 1080, u: "/tjv-products-1080.webp" }
-        ];
-        var isMobile = window.matchMedia("(max-width: 640px)").matches;
-        var cssWidth = isMobile ? window.innerWidth : window.innerWidth * 0.48;
-        var needed = cssWidth * Math.min(window.devicePixelRatio || 1, 2);
-        var pick = candidates[candidates.length - 1].u;
-        for (var i = 0; i < candidates.length; i++) {
-          if (candidates[i].w >= needed) { pick = candidates[i].u; break; }
-        }
-        var l = document.createElement("link");
-        l.rel = "preload";
-        l.as = "image";
-        l.type = "image/webp";
-        l.href = pick;
-        l.fetchpriority = "high";
-        document.head.appendChild(l);
-      })();
-    </script>
     <link rel="stylesheet" href="styles.css" media="screen" />
     <script type="application/ld+json">
     {
@@ -106,7 +84,7 @@
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">Your Building Partner in Wakiso and Beyond</p>
-          <h1>Build strong.<br /><span>Build right<span class="secret-trigger" onclick="toggleAdminAccess()" title="Admin access">.</span></span></h1>
+          <h1>Build strong.<br /><span>Build right<span class="secret-trigger" title="Admin access">.</span></span></h1>
           <p>From the first foundation to the final finish, TJV General Hardware offers dependable materials for every stage of your construction project. Quality you can build on.</p>
           <div class="hero-actions">
             <a class="button primary" href="#products">Explore our products <b>→</b></a>
@@ -151,7 +129,6 @@
           <div class="instock-container">
             <div class="instock-header">
               <h3>In-Stock Items</h3>
-              <a href="admin.html" class="admin-link hidden" id="admin-toggle" title="Admin panel">Admin</a>
             </div>
             <div id="instock-items" class="instock-grid">
               <!-- Products loaded here by JavaScript -->
@@ -236,9 +213,9 @@
 
     <!-- Audio Jingle -->
     <audio id="jingle" preload="auto" hidden>
-      <source src="/tvj-hardware-jingle.mpeg" type="audio/mpeg" />
+      <source src="public/tvj-hardware-jingle.mpeg" type="audio/mpeg" />
     </audio>
 
     <script defer src="script.js"></script>
   </body>
-</html>>
+</html>

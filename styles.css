@@ -152,8 +152,6 @@ nav a:hover{color:var(--red)}
   position:relative;
   z-index:2;
 }
-/* The old .hero-map column is no longer used — keep rule empty for safety */
-.hero-map{display:none}
 .eyebrow{
   margin:0 0 14px;
   color:var(--gold);
@@ -408,24 +406,6 @@ h1,h2,h3{
   font-family:"Barlow Condensed",Impact,sans-serif;
   text-transform:uppercase;
   letter-spacing:-.025em;
-}
-.admin-link{
-  color:var(--gold);
-  font-size:12px;
-  font-weight:700;
-  text-decoration:none;
-  padding:8px 12px;
-  border:1px solid var(--gold);
-  border-radius:4px;
-  transition:all .2s;
-}
-.admin-link:hover{background:var(--gold);color:var(--navy)}
-.admin-link.hidden{opacity:0;pointer-events:none;transform:scale(.8)}
-.admin-link.show{opacity:1;pointer-events:auto;transform:scale(1);animation:adminReveal .5s ease-out}
-@keyframes adminReveal{
-  0%{opacity:0;transform:scale(.8) translateY(-10px)}
-  60%{transform:scale(1.05) translateY(-2px)}
-  100%{opacity:1;transform:scale(1) translateY(0)}
 }
 
 .instock-grid{

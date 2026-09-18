@@ -194,8 +194,8 @@ function initSlideshow() {
   initializeSlideshow();
 }
 
-// Load in-stock items and refresh slideshow
-function loadInStockItems() {
+// Load in-stock items
+function loadInStockItems(refreshSlideshowAfter = false) {
   const itemsContainer = document.getElementById('instock-items');
   const noItemsMsg = document.getElementById('no-items-message');
   
@@ -230,8 +230,8 @@ function loadInStockItems() {
     });
   }
 
-  // Refresh slideshow to show updated products
-  if (window.refreshSlideshow) {
+  // Only refresh slideshow if explicitly requested (e.g. dynamic admin update)
+  if (refreshSlideshowAfter && window.refreshSlideshow) {
     window.refreshSlideshow();
   }
 }
@@ -308,13 +308,11 @@ function showAdminAccessMessage() {
 // Initialize everything
 function initializeApp() {
   initSlideshow();
-  loadInStockItems();
+  loadInStockItems(false);
   
-  // Also set up event listener as backup to onclick
   const secretTrigger = document.querySelector('.secret-trigger');
   if (secretTrigger) {
     secretTrigger.addEventListener('click', toggleAdminAccess);
-    console.log('Secret trigger event listener attached'); // Debug log
   }
 }
 

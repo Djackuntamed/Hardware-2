@@ -16,18 +16,20 @@ Professional, fast-loading website for TJV General Hardware - quality constructi
 ```
 .
 ├── index.html              Main website
+├── admin.html              Admin panel (password protected)
 ├── styles.css              All styling
-├── script.js               Interactivity & jingle player
+├── script.js               Interactivity, catalogue slideshow & jingle player
+├── admin.js                Admin inventory management script
+├── images/                 Product catalogue images & luxury background
+│   ├── 1.jpg ... 9.jpg     Catalogue slide images
+│   └── bg-luxury.jpg       Page luxury backdrop
 ├── public/                 Static assets (served by Vercel)
-│   ├── tjv-logo.*         Logos (WebP + JPG)
-│   ├── tjv-products-*.*   Product images
-│   ├── TJV General Hardware.gif
-│   ├── tvj-products-slideshow.mp4
-│   └── tvj-hardware-jingle.mpeg
+│   ├── tjv-logo-new.png    Store brand logo
+│   └── tvj-hardware-jingle.mpeg Audio jingle
 ├── vercel.json             Vercel config
 ├── .gitignore              Git ignore
 ├── .github/workflows/      GitHub Actions CI/CD
-└── README.md               This file
+└── README.md               Project documentation
 ```
 
 ## 🚀 Quick Start
@@ -87,12 +89,11 @@ git push
 
 ## 🔗 Asset Paths
 
-All assets are served from root:
-- Images: `/tjv-logo.webp`, `/tjv-products-1080.webp`
-- Audio: `/tvj-hardware-jingle.mpeg`
-- Video: `/tjv-products-slideshow.mp4`
-
-Vercel URL format: `https://tjv-hardware.vercel.app/filename.ext`
+Key static assets:
+- Brand logo: `/public/tjv-logo-new.png`
+- Catalogue images: `images/1.jpg` through `images/9.jpg`
+- Background image: `images/bg-luxury.jpg`
+- Audio jingle: `public/tvj-hardware-jingle.mpeg`
 
 ## 🐛 Troubleshooting
 
